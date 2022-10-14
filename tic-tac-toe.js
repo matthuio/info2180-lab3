@@ -1,8 +1,9 @@
+var y = 0;
 window.onload= function(){
     var button=document.getElementsByClassName("btn")[0];
     button.addEventListener("click",function(){
-        
-    let y = 0;
+    y=0;
+    console.log(y);
     var square = document.getElementById("board").children;
     var stat = document.getElementById("status");
     stat.innerHTML= "Move your mouse over a square and click to play an X or an O.";
@@ -24,7 +25,7 @@ window.onload= function(){
             {
                 square[x].innerHTML="X";
                 square[x].classList.add("X");
-                y++;
+                y+=1;
             }               
             }
             else
@@ -33,7 +34,7 @@ window.onload= function(){
                 {
                     square[x].innerHTML="O";
                     square[x].classList.add("O");
-                    y++;
+                    y+=1;
             }
         }
             for(let p=0;p<square.length;p+=3)
@@ -42,11 +43,13 @@ window.onload= function(){
                 {   
                     if(y%2 == 0)
                     {
+                        console.log(y);
                         stat.innerHTML=("Congragulations O is the winner");
                         stat.classList.add("you-won");
                     }
                     else
                     {
+                        console.log(y);
                         stat.innerHTML=("Congragulations X is the winner");
                         stat.classList.add("you-won");
                     }
@@ -58,11 +61,13 @@ window.onload= function(){
                 {
                     if(y%2 == 0)
                     {
+                        console.log(y);
                         stat.innerHTML=("Congragulations O is the winner");
                         stat.classList.add("you-won");
                     }
                     else
                     {
+                        console.log(y);
                         stat.innerHTML=("Congragulations X is the winner");
                         stat.classList.add("you-won");
                     }
@@ -73,12 +78,14 @@ window.onload= function(){
                 {
                     if(y%2 == 0)
                     {
-                        stat.innerHTML=("Congragulations X is the winner");
+                        console.log(y);
+                        stat.innerHTML=("Congragulations O is the winner");
                         stat.classList.add("you-won");
                     }
                     else
                     {
-                        stat.innerHTML=("Congragulations O is the winner");
+                        console.log(y);
+                        stat.innerHTML=("Congragulations X is the winner");
                         stat.classList.add("you-won");
                     }
                 }
@@ -87,12 +94,14 @@ window.onload= function(){
                 {
                     if(y%2 == 0)
                     {
-                        stat.innerHTML=("Congragulations X is the winner");
+                        console.log(y);
+                        stat.innerHTML=("Congragulations O is the winner");
                         stat.classList.add("you-won");
                     }
                     else
                     {
-                        stat.innerHTML=("Congragulations O is the winner");
+                        console.log(y);
+                        stat.innerHTML=("Congragulations X is the winner");
                         stat.classList.add("you-won");
                     }
                 }
